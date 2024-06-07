@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is just another React App.
+          Oh this is a react app wow
         </p>
         <a
           className="App-link"
