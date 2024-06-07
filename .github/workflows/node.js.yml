@@ -4,10 +4,7 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -27,3 +24,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: npm run build
+    - run: gh-pages -d build
