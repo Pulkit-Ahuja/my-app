@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: [Infinity-Void]
+    runs-on: [self-hosted]
 
     strategy:
       matrix:
