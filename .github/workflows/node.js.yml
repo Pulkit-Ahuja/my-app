@@ -24,6 +24,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - name: Dump runner context
+      env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+      run: echo "$RUNNER_CONTEXT"
     - run: npm run build
     - run: npm install -g gh-pages --save-dev
     - run: gh-pages -d build
