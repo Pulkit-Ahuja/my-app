@@ -9,8 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on:
-      labels: Infinity-Void
+    runs-on: [Infinity-Void]
 
     strategy:
       matrix:
